@@ -139,12 +139,12 @@ void Instance::scriptMessageReceived(
 		WebKitUserContentManager *manager,
 		WebKitJavascriptResult *result) {
 	auto message = std::string();
-	if (webkit_javascript_result_get_js_value && jsc_value_to_string) {
+	/*if (webkit_javascript_result_get_js_value && jsc_value_to_string) {
 		JSCValue *value = webkit_javascript_result_get_js_value(result);
 		const auto s = jsc_value_to_string(value);
 		message = s;
 		g_free(s);
-	} else {
+	} else */{
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 		JSGlobalContextRef ctx

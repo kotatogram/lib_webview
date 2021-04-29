@@ -34,7 +34,7 @@ inline GType (*gtk_window_get_type)(void);
 inline void (*gtk_window_set_decorated)(GtkWindow *window, gboolean setting);
 inline Window (*gdk_x11_window_get_xid)(GdkWindow *window);
 
-inline char *(*jsc_value_to_string)(JSCValue *value);
+//inline char *(*jsc_value_to_string)(JSCValue *value);
 inline JSStringRef (*JSValueToStringCopy)(
 	JSContextRef ctx,
 	JSValueRef value,
@@ -46,8 +46,10 @@ inline size_t (*JSStringGetUTF8CString)(
 	size_t bufferSize);
 inline void (*JSStringRelease)(JSStringRef string);
 
+/*
 inline JSCValue *(*webkit_javascript_result_get_js_value)(
 	WebKitJavascriptResult *js_result);
+*/
 inline JSGlobalContextRef (*webkit_javascript_result_get_global_context)(
 	WebKitJavascriptResult *js_result);
 inline JSValueRef (*webkit_javascript_result_get_value)(

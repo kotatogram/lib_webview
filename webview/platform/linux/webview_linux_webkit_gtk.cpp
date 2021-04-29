@@ -56,8 +56,10 @@ bool Resolve() {
 		return false;
 	}
 	{
+		/*
 		const auto available1 = LOAD_GTK_SYMBOL(webkit2gtk, jsc_value_to_string)
 			&& LOAD_GTK_SYMBOL(webkit2gtk, webkit_javascript_result_get_js_value);
+		*/
 
 		const auto available2 = LOAD_GTK_SYMBOL(webkit2gtk, webkit_javascript_result_get_global_context)
 			&& LOAD_GTK_SYMBOL(webkit2gtk, webkit_javascript_result_get_value)
@@ -65,7 +67,7 @@ bool Resolve() {
 			&& LOAD_GTK_SYMBOL(webkit2gtk, JSStringGetMaximumUTF8CStringSize)
 			&& LOAD_GTK_SYMBOL(webkit2gtk, JSStringGetUTF8CString)
 			&& LOAD_GTK_SYMBOL(webkit2gtk, JSStringRelease);
-		if (!available1 && !available2) {
+		if (/*!available1 && */!available2) {
 			return false;
 		}
 	}
